@@ -147,9 +147,9 @@
                       }
                       events.push(rootEvent);
                       events.reverse();
-                      promises.push(MP.api.funnel.apply(MP.api, events));
+                      promises.push(MP.api.funnel.apply(MP.api, events, params));
                     } else {
-                      promises.push(MP.api.funnel(node.name, event));
+                      promises.push(MP.api.funnel(node.name, event, params));
                     }
                 }
             });
