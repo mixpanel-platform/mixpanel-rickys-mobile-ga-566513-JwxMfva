@@ -131,8 +131,9 @@
                 var parent;
                 var events = [];
                 var params = {
-                  'length': 1,    // May not be greater than 60 days
-                  'unit': 'week' // Can be 'day' or 'week'
+                  'from': moment().subtract(1, 'months'); // start date
+                  'to': moment(); // end date
+                  'length': 1,    // number of days each user has to complete the funnel
                 };
                 
                 if (event != node.name) {
